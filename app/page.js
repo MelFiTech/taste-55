@@ -2,7 +2,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Value from './components/Value.jsx';
 import Suppliers from './components/Suppliers.jsx';
-import Why from './components/Why.jsx';
+import Why from './components/Why';
+import WhyMobile from './components/WhyMobile';
 import About from './components/About.jsx';
 import Faq from './components/Faq.jsx';
 import Subscribe from './components/Subscribe.jsx';
@@ -16,11 +17,15 @@ export default function Home() {
       <Hero />
       <Value />
       <Suppliers />
-      <Why />
+      <div className="md:hidden">
+        <WhyMobile />
+      </div>
+      <div className="hidden md:block">
+        <Why />
+      </div>
       <About />
       <Faq />
       <Subscribe />
-      {/* Other components */}
     </main>
   );
 }

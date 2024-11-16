@@ -16,15 +16,15 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-20 h-full flex flex-col justify-end items-center text-center text-white pb-10">
-        <h3 className="text-7xl font-serif font-normal mb-4">Your Friendly</h3>
-        <h3 className="text-7xl font-serif font-normal mb-12">Neighborhood Grocer</h3>
+      <div className="relative z-20 h-full flex flex-col justify-end items-center text-center text-white pb-10 px-4">
+        <h3 className="text-4xl md:text-7xl font-serif font-normal mb-2 md:mb-4">Your Friendly</h3>
+        <h3 className="text-4xl md:text-7xl font-serif font-normal mb-8 md:mb-12">Neighborhood Grocer</h3>
         
         {/* See More Button/Arrow */}
-        <div className="flex flex-col items-center animate-[bounce_3s_ease-in-out_infinite]">
-          <span className="text-white mb-2">See more</span>
+        <div className="flex flex-col items-center animate-[bounce_1.5s_ease-in-out_infinite]">
+          <span className="text-sm md:text-base text-white mb-1 md:mb-2">See more</span>
           <svg 
-            className="w-6 h-6" 
+            className="w-4 h-4 md:w-6 md:h-6" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"

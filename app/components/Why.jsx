@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const features = [
   {
@@ -52,8 +53,14 @@ export default function Why() {
                   <p className="text-sm leading-tight">{feature.subdescription}</p>
                 </div>
               </div>
-              <div className="flex-grow">
-                <img src={feature.image} alt={feature.title} className="w-full h-full object-cover" />
+              <div className="flex-grow relative">
+                <Image 
+                  src={feature.image} 
+                  alt={feature.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
               </div>
             </div>
           </div>
@@ -65,7 +72,7 @@ export default function Why() {
         <div className="max-w-[1240px] mx-auto mb-12 px-4 pt-20">
           <h2 className="text-4xl font-bold mb-4 text-left">Why Choose Taste55</h2>
           <p className="text-lg text-left max-w-[600px]">
-            Every item is inspected for quality, freshness, and flavor, so you can shop with confidence knowing you're getting the very best for you and your family.
+            Every item is inspected for quality, freshness, and flavor, so you can shop with confidence knowing you&apos;re getting the very best for you and your family.
           </p>
         </div>
       </div>

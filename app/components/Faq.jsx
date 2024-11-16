@@ -29,26 +29,26 @@ export default function Faq() {
   };
 
   return (
-    <section className="py-[120px] bg-red-600 text-white">
-      <div className="max-w-[1240px] mx-auto flex items-start">
-        <div className="w-1/2 text-left pr-12">
-          <h2 className="text-4xl font-bold mb-4">FAQ</h2>
-          <p className="text-lg">
+    <section className="py-16 md:py-[120px] bg-red-600 text-white">
+      <div className="max-w-[1240px] mx-auto px-4 md:px-8 flex flex-col md:flex-row md:items-start">
+        <div className="w-full md:w-1/2 text-left mb-8 md:mb-0 md:pr-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">FAQ</h2>
+          <p className="text-base md:text-lg">
             Got questions? Check out our FAQs for answers on groceries availability, our suppliers, and more!
           </p>
         </div>
-        <div className="w-1/2 space-y-4">
+        <div className="w-full md:w-1/2 space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="bg-white rounded-lg p-4">
               <div
-                className="flex justify-between cursor-pointer text-black"
+                className="flex justify-between items-center cursor-pointer text-black"
                 onClick={() => toggleFaq(index)}
               >
-                <h3 className="text-lg font-semibold">{faq.question}</h3>
-                <span className="text-xl">{openIndex === index ? '-' : '+'}</span>
+                <h3 className="text-base md:text-lg font-semibold pr-4">{faq.question}</h3>
+                <span className="text-xl flex-shrink-0">{openIndex === index ? '-' : '+'}</span>
               </div>
               {openIndex === index && (
-                <p className="mt-2 text-sm text-black">{faq.answer}</p>
+                <p className="mt-2 text-sm md:text-base text-black">{faq.answer}</p>
               )}
             </div>
           ))}

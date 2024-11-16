@@ -2,6 +2,7 @@
 
 import Button from './Button';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,17 +21,39 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
+
   return (
-    <header className={`py-2 px-3 md:py-4 md:px-8 transition-all duration-300 ${
+    <header className={`fixed w-full z-50 py-2 px-3 md:py-4 md:px-8 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto flex flex-col">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img 
+            <Image 
               src={isScrolled ? "/logob.png" : "/logo.png"} 
-              alt="Taste 55 Logo" 
-              className="w-[60px] h-[60px] md:w-[60px] md:h-[60px] object-contain" 
+              alt="Taste 55 Logo"
+              width={60}
+              height={60}
+              className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] object-contain" 
+            />
+          </div>
+
+          {/* Mobile Est Image */}
+          <div className="md:hidden">
+            <Image 
+              src={isScrolled ? "/estb.png" : "/est.png"} 
+              alt="Taste 55 Established"
+              width={128}
+              height={32}
+              className="w-24" 
             />
           </div>
           
@@ -65,26 +88,28 @@ export default function Header() {
         }`}></div>
 
         {/* Mobile Navigation with slide animation */}
-        <nav className={`${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 fixed md:relative top-[60px] md:top-0 left-0 w-full h-[calc(100vh-60px)] md:h-auto bg-green-900/95 md:bg-transparent transition-all duration-300 ease-in-out md:block`}>
-          <ul className="flex flex-col md:flex-row items-center md:justify-center space-y-6 md:space-y-0 md:space-x-16 pt-8 md:pt-0">
-            <li><a href="#" className={`text-base md:text-sm font-medium transition-all duration-300 hover:opacity-80 ${isScrolled ? 'md:text-green-900' : 'text-white'}`}>Home</a></li>
-            <li><a href="#" className={`text-base md:text-sm font-medium transition-all duration-300 hover:opacity-80 ${isScrolled ? 'md:text-green-900' : 'text-white'}`}>Suppliers</a></li>
-            <li>
-              <div className="text-center relative py-4 md:py-0">
-                <img 
+        <nav className={`${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 fixed md:relative top-[60px] md:top-0 left-0 w-full h-[calc(100vh-60px)] md:h-auto bg-green-900/95 md:bg-transparent transition-all duration-300 ease-in-out md:block overflow-y-auto`}>
+          <ul className="flex flex-col md:flex-row items-center md:justify-center space-y-8 md:space-y-0 md:space-x-16 pt-4 md:pt-0">
+            <li><a href="#" className="text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 text-white">Home</a></li>
+            <li><a href="#" className="text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 text-white">Suppliers</a></li>
+            <li className="hidden md:block">
+              <div className="text-center relative py-6 md:py-0">
+                <Image 
                   src={isScrolled ? "/estb.png" : "/est.png"} 
-                  alt="Taste 55 Established" 
-                  className="w-28 md:w-32 mx-auto" 
+                  alt="Taste 55 Established"
+                  width={128}
+                  height={32}
+                  className="w-24 md:w-32 mx-auto" 
                 />
               </div>
             </li>
-            <li><a href="#" className={`text-base md:text-sm font-medium transition-all duration-300 hover:opacity-80 ${isScrolled ? 'md:text-green-900' : 'text-white'}`}>About Us</a></li>
-            <li><a href="#" className={`text-base md:text-sm font-medium transition-all duration-300 hover:opacity-80 ${isScrolled ? 'md:text-green-900' : 'text-white'}`}>Community</a></li>
+            <li><a href="#" className="text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 text-white">About Us</a></li>
+            <li><a href="#" className="text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 text-white">Community</a></li>
           </ul>
           
           {/* Mobile Newsletter Button */}
-          <div className="mt-8 px-6 md:hidden">
-            <button className={`w-full border font-medium px-5 py-3 rounded-full transition-all duration-300 ${
+          <div className="mt-10 px-6 pb-8 md:hidden">
+            <button className={`w-full border-2 font-medium px-5 py-3 rounded-full transition-all duration-300 ${
               isScrolled 
                 ? 'border-green-900 text-green-900 hover:bg-green-900 hover:text-white'
                 : 'border-white text-white hover:bg-white hover:text-black'
