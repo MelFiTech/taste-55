@@ -14,18 +14,28 @@ export default function Home() {
       <div className="fixed top-0 left-0 right-0 z-50">
         <Header />
       </div>
-      <Hero />
+      <div id="home">
+        <Hero />
+      </div>
       <Value />
-      <Suppliers />
-      <div className="md:hidden">
+      <div id="suppliers">
+        <Suppliers />
+      </div>
+      <div id="why" className="md:hidden">
         <WhyMobile />
       </div>
-      <div className="hidden md:block">
+      <div id="why" className="hidden md:block">
         <Why />
       </div>
-      <About />
-      <Faq />
-      <Subscribe />
+      <div id="about">
+        <About />
+      </div>
+      <div id="faq">
+        <Faq />
+      </div>
+      <div id="subscribe">
+        <Subscribe />
+      </div>
     </main>
   );
 }

@@ -90,8 +90,8 @@ export default function Header() {
         {/* Mobile Navigation with slide animation */}
         <nav className={`${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 fixed md:relative top-[60px] md:top-0 left-0 w-full h-[calc(100vh-60px)] md:h-auto bg-green-900/95 md:bg-transparent transition-all duration-300 ease-in-out md:block overflow-y-auto`}>
           <ul className="flex flex-col md:flex-row items-center md:justify-center space-y-8 md:space-y-0 md:space-x-16 pt-4 md:pt-0">
-            <li><a href="#" className="text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 text-white">Home</a></li>
-            <li><a href="#" className="text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 text-white">Suppliers</a></li>
+            <li><a href="#home" onClick={() => setIsMenuOpen(false)} className={`text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 ${isScrolled ? 'md:text-green-900' : 'text-white'}`}>Home</a></li>
+            <li><a href="#suppliers" onClick={() => setIsMenuOpen(false)} className={`text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 ${isScrolled ? 'md:text-green-900' : 'text-white'}`}>Suppliers</a></li>
             <li className="hidden md:block">
               <div className="text-center relative py-6 md:py-0">
                 <Image 
@@ -103,8 +103,8 @@ export default function Header() {
                 />
               </div>
             </li>
-            <li><a href="#" className="text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 text-white">About Us</a></li>
-            <li><a href="#" className="text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 text-white">Community</a></li>
+            <li><a href="#about" onClick={() => setIsMenuOpen(false)} className={`text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 ${isScrolled ? 'md:text-green-900' : 'text-white'}`}>About Us</a></li>
+            <li><a href="#faq" onClick={() => setIsMenuOpen(false)} className={`text-lg md:text-sm font-medium transition-all duration-300 hover:opacity-80 ${isScrolled ? 'md:text-green-900' : 'text-white'}`}>Community</a></li>
           </ul>
           
           {/* Mobile Newsletter Button */}
