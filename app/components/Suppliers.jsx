@@ -25,7 +25,7 @@ const suppliers = [
   {
     region: 'North America',
     description: 'From coast to coast, bringing you the finest quality groceries. Fresh, local, and proudly North American.',
-    image: '/north-america.png',
+    image: '/north-America.png',
   },
   {
     region: 'South America',
