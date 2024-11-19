@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -9,12 +10,14 @@ export default function About() {
           <p className="text-base md:text-lg mb-6">
             The inspiration behind Taste 55 and Partners spans three geographical regions – North America, Europe, and Sub-Saharan Africa heritage. This journey has forged illuminating conversations with farmers and food producers around the world about the practice of foodstuffs, ecological footprints, and food insecurity.
           </p>
-          <button className="bg-white text-green-900 font-bold py-2 px-6 rounded-full">
-            Continue Reading
-          </button>
+          <Link href="/about">
+            <button className="bg-white text-green-900 font-bold py-2 px-6 rounded-full">
+              Continue Reading
+            </button>
+          </Link>
         </div>
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
-          <Image src="/image 28.png" alt="Groceries" width={500} height={300} className="w-full h-full object-cover rounded-lg" />
+          <Image src="/image 28.png" alt="Groceries" width={600} height={400} className="w-full h-full object-cover rounded-lg" />
         </div>
       </div>
       <div className="absolute inset-0 hidden md:block bg-[url('/vector.png')] bg-cover bg-center bg-no-repeat opacity- z-10"></div>

@@ -120,92 +120,93 @@ export default function NewsletterModal({ isOpen, onClose }) {
       
       <button 
         onClick={onClose}
-        className="relative mb-4 px-4 py-1.5 md:px-6 md:py-2 bg-white hover:bg-gray-100 rounded-full text-base md:text-lg font-medium text-gray-900 transition-colors z-10"
+        className="relative mb-2 sm:mb-4 px-3 sm:px-4 md:px-6 py-1 sm:py-1.5 md:py-2 bg-white hover:bg-gray-100 rounded-full text-sm sm:text-base md:text-lg font-medium text-gray-900 transition-colors z-10"
       >
         Close
       </button>
 
-      <div className="relative w-full max-w-4xl max-h-[80vh] overflow-y-auto">
-        <div className="bg-[#F5FFF7] rounded-[20px] md:rounded-[32px] overflow-hidden">
+      <div className="relative w-full max-w-[90%] sm:max-w-[85%] md:max-w-4xl max-h-[85vh] sm:max-h-[80vh] overflow-y-auto">
+        <div className="bg-[#F5FFF7] rounded-[16px] sm:rounded-[20px] md:rounded-[32px] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Mobile Image */}
-            <div className="relative h-48 md:hidden">
+            <div className="relative h-36 sm:h-48 md:hidden">
               <Image
                 src="/modal.png"
                 alt="Fresh produce display"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
 
-            <div className="p-6 md:p-12 space-y-4 md:space-y-6 relative">
+            <div className="p-4 sm:p-6 md:p-12 space-y-3 sm:space-y-4 md:space-y-6 relative">
               {/* Success Animation Overlay */}
               {showSuccess && (
                 <div className="absolute inset-0 bg-[#F5FFF7] flex items-center justify-center animate-fade-in z-10">
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 mx-auto bg-green-500 rounded-full flex items-center justify-center animate-scale-up">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="text-center space-y-3 sm:space-y-4">
+                    <div className="w-12 sm:w-16 h-12 sm:h-16 mx-auto bg-green-500 rounded-full flex items-center justify-center animate-scale-up">
+                      <svg className="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p className="text-xl md:text-2xl font-bold text-green-500">Successfully Subscribed!</p>
+                    <p className="text-lg sm:text-xl md:text-2xl font-bold text-green-500">Successfully Subscribed!</p>
                   </div>
                 </div>
               )}
 
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-900">Subscribe to our Newsletter</h2>
-              <p className="text-gray-700 text-base md:text-lg">
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900">Subscribe to our Newsletter</h2>
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg">
                 Signup to our newsletter to receive the latest updates and grocery news.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                 {error.general && (
-                  <p className="text-red-500 text-sm text-left">{error.general}</p>
+                  <p className="text-red-500 text-xs sm:text-sm text-left">{error.general}</p>
                 )}
 
                 <div className="space-y-1">
-                  <label className="text-gray-700 text-sm font-medium">Your Name</label>
+                  <label className="text-gray-700 text-xs sm:text-sm font-medium">Your Name</label>
                   <div className="relative">
                     <input
                       type="text"
                       value={name}
                       onChange={handleNameChange}
-                      className={`w-full p-3 md:p-4 bg-white rounded-lg border ${
+                      className={`w-full h-[42px] px-3 bg-white rounded-lg border ${
                         error.name ? 'border-red-500' : 'border-[#4CAF50]'
-                      } text-gray-900 transition-colors text-base md:text-lg`}
+                      } text-gray-900 transition-colors text-sm`}
                       placeholder="My Name"
                     />
                     {name && (
                       <button
                         type="button"
                         onClick={() => setName('')}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800"
                       >
                         ✕
                       </button>
                     )}
                   </div>
-                  {error.name && <p className="text-red-500 text-sm text-left">{error.name}</p>}
+                  {error.name && <p className="text-red-500 text-xs sm:text-sm text-left">{error.name}</p>}
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-gray-700 text-sm font-medium">Your Email</label>
+                  <label className="text-gray-700 text-xs sm:text-sm font-medium">Your Email</label>
                   <input
                     type="email"
                     value={email}
                     onChange={handleEmailChange}
-                    className={`w-full p-3 md:p-4 bg-white rounded-lg border ${
+                    className={`w-full h-[42px] px-3 bg-white rounded-lg border ${
                       error.email ? 'border-red-500' : 'border-[#4CAF50]'
-                    } text-gray-900 transition-colors text-base md:text-lg`}
+                    } text-gray-900 transition-colors text-sm`}
                     placeholder="email@example.com"
                   />
-                  {error.email && <p className="text-red-500 text-sm text-left">{error.email}</p>}
+                  {error.email && <p className="text-red-500 text-xs sm:text-sm text-left">{error.email}</p>}
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'loading' || !isFormValid}
-                  className={`w-full p-3 md:p-4 text-white rounded-lg text-base md:text-lg font-medium transition-all transform hover:scale-[1.02] active:scale-[0.98] ${
+                  className={`w-full h-[42px] text-white rounded-lg text-sm font-medium transition-all transform hover:scale-[1.02] active:scale-[0.98] ${
                     status === 'loading' 
                       ? 'bg-gray-400 cursor-not-allowed' 
                       : status === 'success'
@@ -223,7 +224,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
                 </button>
               </form>
 
-              <p className="text-[#FF6B4D] text-xs md:text-sm">
+              <p className="text-[#FF6B4D] text-[10px] sm:text-xs md:text-sm">
                 Don&apos;t Worry, We won&apos;t spam you
               </p>
             </div>
@@ -235,6 +236,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
                 alt="Fresh produce display"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
           </div>
