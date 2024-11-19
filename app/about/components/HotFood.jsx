@@ -1,5 +1,5 @@
-import { Marquee } from '@/app/components/magicui/marquee'
 import NextImage from 'next/image'
+import { Marquee } from '@/app/components/magicui/marquee'
 
 export default function AboutProcess() {
   const hotFoodImages = [
@@ -18,7 +18,7 @@ export default function AboutProcess() {
   ]
 
   return (
-    <section className="relative py-12 md:py-20 bg-[#FFF3EC]">
+    <section className="relative py-12 md:py-20 bg-[#FFF3EC] overflow-hidden">
       <div className="absolute inset-0">
         <NextImage
           src="/FAQ (1).png"
@@ -30,7 +30,7 @@ export default function AboutProcess() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Content - Moved to top on mobile */}
-          <div className="space-y-4 md:space-y-6 order-1 md:order-2">
+          <div className="space-y-4 md:space-y-6 order-1 md:order-2 animate-fade-in">
             <h2 className="text-[#10482B] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Our Daily Hot Foods
             </h2>
@@ -39,22 +39,28 @@ export default function AboutProcess() {
             </p>
           </div>
 
-          {/* Marquee - Moved to bottom on mobile */}
-          <div className="relative h-[300px] md:h-[500px] w-full order-2 md:order-1 flex justify-center">
-            <div className="absolute top-0 w-full h-12 md:h-20 bg-gradient-to-b from-[#FFF3EC] to-transparent z-10" />
-            <Marquee className="h-full w-full" pauseOnHover>
-              {hotFoodImages.map((image, index) => (
-                <div key={index} className="relative h-[200px] md:h-[300px] w-[300px] md:w-[500px] mx-2 md:mx-4 rounded-lg overflow-hidden">
-                  <NextImage
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </Marquee>
-            <div className="absolute bottom-0 w-full h-12 md:h-20 bg-gradient-to-t from-[#FFF3EC] to-transparent z-10" />
+          {/* Images Grid - Moved to bottom on mobile */}
+          <div className="relative order-2 md:order-1 animate-fade-in">
+            <div className="relative">
+              {/* Top fade gradient */}
+              <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#FFF3EC] to-transparent z-10"></div>
+              
+              <Marquee horizontal pauseOnHover>
+                {hotFoodImages.map((image, index) => (
+                  <div key={index} className="relative h-[250px] w-full rounded-lg overflow-hidden">
+                    <NextImage
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </Marquee>
+
+              {/* Bottom fade gradient */}
+              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#FFF3EC] to-transparent z-10"></div>
+            </div>
           </div>
         </div>
       </div>
