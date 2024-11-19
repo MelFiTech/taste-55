@@ -5,7 +5,7 @@ export default function AboutTeam() {
     <section className="relative py-12 md:py-20 bg-[#E12D39] text-white">
       <div className="absolute inset-0">
         <NextImage
-          src="/vector 5.png"
+          src="/Vector 5.png"
           alt="Background Pattern"
           fill
           className="object-cover opacity-20"

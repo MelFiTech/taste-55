@@ -15,14 +15,24 @@ export default function AboutMission() {
     return (
       <section className="py-12 md:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-left">
+          <div className="text-left">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-8">Our Global Inspiration</h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
               The inspiration behind Taste 55 and Partners spans three geographical regions – North America, Europe, and Sub-Saharan Africa heritage. This journey has forged illuminating conversations with farmers and food producers around the world about the practice of foodstuffs, ecological footprints and food insecurity.
             </p>
             
-            <div className="relative">
-              <div className="flex animate-ticker-normal">
+            <div className="relative w-full overflow-hidden">
+              {/* Gradient overlays for fade effect */}
+              <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+              <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+              
+              <div 
+                className="flex animate-marquee whitespace-nowrap"
+                style={{
+                  animation: 'marquee 15s linear infinite',
+                  willChange: 'transform'
+                }}
+              >
                 {[...images, ...images].map((image, index) => (
                   <div 
                     key={index}

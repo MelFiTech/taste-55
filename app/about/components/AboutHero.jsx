@@ -1,6 +1,6 @@
 export default function AboutHero() {
   return (
-    <section className="relative h-[70vh]">
+    <section className="relative h-[40vh] md:h-[60vh]">
       <div className="absolute inset-0">
         <video
           src="/fresh.mp4"

@@ -15,9 +15,9 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
-            <h2 className="text-[#10482B] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Our Value</h2>
+          <h2 className="text-4xl font-bold mb-6">Our Value</h2>
             
-            <p className="text-[#10482B] text-base sm:text-lg leading-relaxed">
+            <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
               To provide the highest quality of foods and products to our communities to improve the overall health of the community and encourage better food behaviors for future generations. We believe that food is medicine, the healthier the foods, better healthy and stronger communities. We do so by partnering with find mission-driver farmers and producers that believe in building stronger communities ties and preserving our environment with ethical and sustainable practices. To consistently drive value:
             </p>
 
@@ -25,7 +25,7 @@ export default function Contact() {
               {values.map((value, index) => (
                 <li key={index} className="flex items-start gap-2 text-[#10482B]">
                   <span className="mt-2">•</span>
-                  <span className="text-sm sm:text-base">{value}</span>
+                  <span className="text-sm sm:text-base font-semibold">{value}</span>
                 </li>
               ))}
             </ul>

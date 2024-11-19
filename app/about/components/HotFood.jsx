@@ -31,9 +31,7 @@ export default function AboutProcess() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Content - Moved to top on mobile */}
           <div className="space-y-4 md:space-y-6 order-1 md:order-2 animate-fade-in">
-            <h2 className="text-[#10482B] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Our Daily Hot Foods
-            </h2>
+          <h2 className="text-4xl font-bold mb-6">Our Daily Hot Foods</h2>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
               A growing movement of food lovers from the diaspora and the Americas introducing new and bold flavors into our kitchens and homes. At Taste55, we are a taste factory from the essentials to special dinners with our loved ones. From our freshly baked breads at 9 am, to our world cuisines lunch entrees served every day.
             </p>
