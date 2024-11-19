@@ -115,7 +115,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
   const isFormValid = name && email && !error.name && !error.email
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 min-h-screen">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
       
       <button 
@@ -125,7 +125,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
         Close
       </button>
 
-      <div className="relative w-full max-w-[90%] sm:max-w-[85%] md:max-w-4xl max-h-[85vh] sm:max-h-[80vh] overflow-y-auto">
+      <div className="relative w-full max-w-[90%] sm:max-w-[85%] md:max-w-4xl">
         <div className="bg-[#F5FFF7] rounded-[16px] sm:rounded-[20px] md:rounded-[32px] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Mobile Image */}
