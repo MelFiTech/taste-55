@@ -1,7 +1,12 @@
-import React from 'react';
+'use client'
+
+import React, { useState } from 'react';
 import Image from 'next/image';
+import NewsletterModal from './NewsletterModal';
 
 export default function Subscribe() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="h-[450px] bg-green-900 text-white text-center relative flex flex-col justify-between">
       <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col items-center">
@@ -18,7 +23,10 @@ export default function Subscribe() {
         <div className="max-w-[1240px] mx-auto px-4">
           <h2 className="text-4xl font-bold mb-4">Subscribe to our Newsletter</h2>
           <p className="mb-8">Signup to Our newsletter to receive the latest updates and grocery news.</p>
-          <button className="bg-white text-black border-2 border-green-500 font-bold py-2 px-6 rounded-full hover:bg-green-50 transition duration-300">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="bg-white text-black border-2 border-green-500 font-bold py-2 px-6 rounded-full hover:bg-green-50 transition duration-300"
+          >
             Subscribe Now
           </button>
         </div>
@@ -37,6 +45,11 @@ export default function Subscribe() {
           </div>
         </div>
       </footer>
+
+      <NewsletterModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 }

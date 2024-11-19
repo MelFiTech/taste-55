@@ -5,7 +5,7 @@ export function Marquee({
   reverse,
   pauseOnHover = false,
   children,
-  vertical = false,
+  horizontal = true,
   repeat = 4,
   ...props
 }) {
@@ -13,10 +13,10 @@ export function Marquee({
     <div
       {...props}
       className={cn(
-        "group flex overflow-hidden [--duration:40s] [--gap:1rem] [gap:var(--gap)]",
+        "group flex overflow-hidden [--duration:40s] [--gap:1rem] [gap:var(--gap)] h-[400px] md:h-[700px]", // Responsive height
         {
-          "flex-row": !vertical,
-          "flex-col": vertical,
+          "flex-row": !horizontal,
+          "flex-col": horizontal,
         },
         className
       )}
@@ -26,15 +26,15 @@ export function Marquee({
         .map((_, i) => (
           <div
             key={i}
-            className={cn("flex shrink-0 justify-around [gap:var(--gap)]", {
-              "animate-marquee flex-row": !vertical,
-              "animate-marquee-vertical flex-col": vertical,
+            className={cn("flex shrink-0 justify-around [gap:var(--gap)] w-full", { // Added w-full
+              "animate-marquee flex-row": !horizontal,
+              "animate-marquee-vertical flex-col": horizontal,
               "group-hover:[animation-play-state:paused]": pauseOnHover,
               "[animation-direction:reverse]": reverse,
             })}
             style={{
               animationDuration: "var(--duration)",
-              animationTimingFunction: "linear",
+              animationTimingFunction: "linear", 
               animationIterationCount: "infinite",
             }}
           >

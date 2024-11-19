@@ -36,8 +36,21 @@ const suppliers = [
 
 export default function Suppliers() {
   return (
-    <section className="py-20 bg-green-900">
-      <div className="max-w-[1240px] mx-auto px-4">
+    <section className="relative py-20 bg-green-900">
+      {/* Background Image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-green-900 z-0" /> {/* Green background */}
+        <Image
+          src="/bg.png"
+          alt="Background"
+          fill
+          className="object-cover mix-blend-overlay"
+          quality={100}
+        />
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10 max-w-[1240px] mx-auto px-4">
         <div className="text-left mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">Meet our Suppliers</h2>
           <p className="text-lg text-white max-w-3xl">

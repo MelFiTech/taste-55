@@ -44,13 +44,13 @@ export default function WhyMobile() {
       </div>
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 max-w-[1240px] mx-auto">
-        {features.map((feature, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4 max-w-[1440px] mx-auto">
+        {features.slice(0, -1).map((feature, index) => (
           <div 
             key={index} 
-            className={`${index % 2 === 0 ? 'bg-[#FFF7F2]' : 'bg-[#FFEAD8]'} rounded-lg overflow-hidden`}
+            className={`${index % 2 === 0 ? 'bg-[#FFF7F2]' : 'bg-[#FFEAD8]'} rounded-lg overflow-hidden flex flex-col h-full`}
           >
-            <div className="p-6">
+            <div className="p-6 flex-shrink-0">
               <div className="mb-2">
                 <h3 className="text-xl font-bold leading-tight">{feature.title} {feature.subtitle}</h3>
               </div>
@@ -58,17 +58,40 @@ export default function WhyMobile() {
                 <p className="text-sm leading-tight">{feature.description}</p>
               </div>
             </div>
-            <div className="h-48 md:h-64 relative w-full">
+            <div className="h-96 md:h-[900px] lg:h-[900px] relative w-full flex-grow">
               <Image 
                 src={feature.image} 
                 alt={feature.title}
                 fill
                 className="object-cover w-full h-full"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                priority
               />
             </div>
           </div>
         ))}
+
+        {/* Last Feature with Different Styling */}
+        <div className="bg-[#FFEAD8] rounded-lg overflow-hidden flex flex-col h-full">
+          <div className="p-6 flex-shrink-0">
+            <div className="mb-2">
+              <h3 className="text-xl font-bold leading-tight">{features[3].title} {features[3].subtitle}</h3>
+            </div>
+            <div>
+              <p className="text-sm leading-tight">{features[3].description}</p>
+            </div>
+          </div>
+          <div className="h-96 md:h-[1000px] lg:h-[1000px] relative w-full flex-grow">
+            <Image 
+              src={features[3].image} 
+              alt={features[3].title}
+              fill
+              className="object-contain w-full h-full brightness-90 contrast-110"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+              priority
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
