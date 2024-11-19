@@ -8,7 +8,7 @@ export default function Subscribe() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="h-[450px] bg-green-900 text-white text-center relative flex flex-col justify-between">
+    <section className="h-[600px] bg-green-900 text-white text-center relative flex flex-col justify-between">
       <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col items-center">
         <span className="text-lg font-bold mb-2 opacity-40 hidden md:block">Taste55</span>
         <Image src="/logo.png" alt="Taste 55 Logo" width={90} height={90} className="opacity-50" />

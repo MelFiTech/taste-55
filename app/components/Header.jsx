@@ -130,7 +130,7 @@ export default function Header() {
                   </div>
                 </li>
                 <li><button onClick={() => {setIsMenuOpen(false); router.push('/about')}} className={`text-lg md:text-[20px] font-medium transition-all duration-300 hover:opacity-80 text-white ${isScrolled ? 'md:text-[#1E4620]' : 'md:text-white'}`}>About Us</button></li>
-                <li><a href="#faq" onClick={() => setIsMenuOpen(false)} className={`text-lg md:text-[20px] font-medium transition-all duration-300 hover:opacity-80 text-white ${isScrolled ? 'md:text-[#1E4620]' : 'md:text-white'}`}>Community</a></li>
+                <li><button onClick={() => {setIsMenuOpen(false); router.push('/#subscribe')}} className={`text-lg md:text-[20px] font-medium transition-all duration-300 hover:opacity-80 text-white ${isScrolled ? 'md:text-[#1E4620]' : 'md:text-white'}`}>Community</button></li>
               </ul>
               
               {/* Mobile Newsletter Button */}

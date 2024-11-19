@@ -58,7 +58,7 @@ export default function Why() {
                   src={feature.image} 
                   alt={feature.title}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </div>

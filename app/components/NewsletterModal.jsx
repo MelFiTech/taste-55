@@ -143,8 +143,8 @@ export default function NewsletterModal({ isOpen, onClose }) {
               {/* Success Animation Overlay */}
               {showSuccess && (
                 <div className="absolute inset-0 bg-[#F5FFF7] flex items-center justify-center animate-fade-in z-10">
-                  <div className="text-center space-y-3 sm:space-y-4">
-                    <div className="w-12 sm:w-16 h-12 sm:h-16 mx-auto bg-green-500 rounded-full flex items-center justify-center animate-scale-up">
+                  <div className="text-left space-y-3 sm:space-y-4">
+                    <div className="w-12 sm:w-16 h-12 sm:h-16 bg-green-500 rounded-full flex items-center justify-center animate-scale-up">
                       <svg className="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
@@ -154,8 +154,8 @@ export default function NewsletterModal({ isOpen, onClose }) {
                 </div>
               )}
 
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900">Subscribe to our Newsletter</h2>
-              <p className="text-gray-700 text-sm sm:text-base md:text-lg">
+              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 text-left">Subscribe to our Newsletter</h2>
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg text-left">
                 Signup to our newsletter to receive the latest updates and grocery news.
               </p>
 
@@ -165,7 +165,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
                 )}
 
                 <div className="space-y-1">
-                  <label className="text-gray-700 text-xs sm:text-sm font-medium">Your Name</label>
+                  <label className="text-gray-700 text-xs sm:text-sm font-medium text-left block">Your Name</label>
                   <div className="relative">
                     <input
                       type="text"
@@ -190,7 +190,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-gray-700 text-xs sm:text-sm font-medium">Your Email</label>
+                  <label className="text-gray-700 text-xs sm:text-sm font-medium text-left block">Your Email</label>
                   <input
                     type="email"
                     value={email}
@@ -224,7 +224,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
                 </button>
               </form>
 
-              <p className="text-[#FF6B4D] text-[10px] sm:text-xs md:text-sm">
+              <p className="text-[#FF6B4D] text-[10px] sm:text-xs md:text-sm text-left">
                 Don&apos;t Worry, We won&apos;t spam you
               </p>
             </div>
