@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Media files
+*.mp4
+*.mov
+*.avi
+*.wmv
+public/fres.mp4
