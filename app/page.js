@@ -17,16 +17,16 @@ export default function Home() {
       <div id="home">
         <Hero />
       </div>
-      <Value />
-      <div id="suppliers">
-        <Suppliers />
-      </div>
       <div id="why" className="md:hidden">
         <WhyMobile />
       </div>
       <div id="why" className="hidden md:block">
         <Why />
       </div>
+      <div id="suppliers">
+        <Suppliers />
+      </div>
+      <Value />
       <div id="about">
         <About />
       </div>

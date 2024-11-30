@@ -18,12 +18,12 @@ export default function Contact() {
             <h2 className="text-3xl md:text-4xl font-bold">Our Value</h2>
             
             <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-              To provide the highest quality of foods and products to our communities to improve the overall health of the community and encourage better food behaviors for future generations. We believe that food is medicine, the healthier the foods, better healthy and stronger communities. We do so by partnering with find mission-driver farmers and producers that believe in building stronger communities ties and preserving our environment with ethical and sustainable practices. To consistently drive value:
+            To provide the highest quality of foods and products to our communities, to improve the overall health of the community and to encourage better food behaviors for future generations. We believe that food is medicine; the healthier the food, the healthier and stronger the community. We partner with find mission-driven farmers and producers that believe in building stronger community ties and preserving our environment with ethical and sustainable practices.  To consistently drive value:
             </p>
 
             <ul className="space-y-3 md:space-y-4">
               {values.map((value, index) => (
-                <li key={index} className="flex items-start gap-2 text-[#10482B]">
+                <li key={index} className="flex items-start gap-2 text-dark">
                   <span className="mt-1.5">•</span>
                   <span className="text-sm md:text-base font-semibold">{value}</span>
                 </li>

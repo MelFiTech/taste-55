@@ -115,127 +115,92 @@ export default function NewsletterModal({ isOpen, onClose }) {
   const isFormValid = name && email && !error.name && !error.email
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4">
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
       
-      <button 
-        onClick={onClose}
-        className="relative mb-2 sm:mb-4 px-3 sm:px-4 md:px-6 py-1 sm:py-1.5 md:py-2 bg-white hover:bg-gray-100 rounded-full text-sm sm:text-base md:text-lg font-medium text-gray-900 transition-colors z-10"
-      >
-        Close
-      </button>
+      <div className="relative">
+        <button 
+          onClick={onClose}
+          className="absolute -top-12 right-0 w-[132px] h-[33px] rounded-full text-[14px] font-medium bg-white shadow-lg hover:bg-gray-100 transition-colors z-10"
+        >
+          Close
+        </button>
 
-      <div className="relative w-full max-w-[90%] sm:max-w-[85%] md:max-w-4xl">
-        <div className="bg-[#F5FFF7] rounded-[16px] sm:rounded-[20px] md:rounded-[32px] overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            {/* Mobile Image */}
-            <div className="relative h-36 sm:h-48 md:hidden">
-              <Image
-                src="/modal.png"
-                alt="Fresh produce display"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+        <div className="relative bg-white rounded-[32px] overflow-hidden p-10">
+          <div className="flex gap-[26px]">
+            <div className="w-[329px] h-[428px]">
+              <div className="mb-8">
+                <h2 className="text-[40px] leading-[48px] font-medium">Subscribe to our Newsletter</h2>
+                <p className="text-gray-600">
+                  Signup to our newsletter to receive the latest updates and grocery news.
+                </p>
+              </div>
 
-            <div className="p-4 sm:p-6 md:p-12 space-y-3 sm:space-y-4 md:space-y-6 relative">
-              {/* Success Animation Overlay */}
-              {showSuccess && (
-                <div className="absolute inset-0 bg-[#F5FFF7] flex items-center justify-center animate-fade-in z-10">
-                  <div className="text-left space-y-3 sm:space-y-4">
-                    <div className="w-12 sm:w-16 h-12 sm:h-16 bg-green-500 rounded-full flex items-center justify-center animate-scale-up">
-                      <svg className="w-6 sm:w-8 h-6 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <p className="text-lg sm:text-xl md:text-2xl font-bold text-green-500">Successfully Subscribed!</p>
-                  </div>
-                </div>
-              )}
-
-              <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900 text-left">Subscribe to our Newsletter</h2>
-              <p className="text-gray-700 text-sm sm:text-base md:text-lg text-left">
-                Signup to our newsletter to receive the latest updates and grocery news.
-              </p>
-
-              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
-                {error.general && (
-                  <p className="text-red-500 text-xs sm:text-sm text-left">{error.general}</p>
-                )}
-
-                <div className="space-y-1">
-                  <label className="text-gray-700 text-xs sm:text-sm font-medium text-left block">Your Name</label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      value={name}
-                      onChange={handleNameChange}
-                      className={`w-full h-[42px] px-3 bg-white rounded-lg border ${
-                        error.name ? 'border-red-500' : 'border-[#4CAF50]'
-                      } text-gray-900 transition-colors text-sm`}
-                      placeholder="My Name"
-                    />
-                    {name && (
-                      <button
-                        type="button"
-                        onClick={() => setName('')}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600 hover:text-gray-800"
-                      >
-                        ✕
-                      </button>
-                    )}
-                  </div>
-                  {error.name && <p className="text-red-500 text-xs sm:text-sm text-left">{error.name}</p>}
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <div className="relative">
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={handleNameChange}
+                    id="name"
+                    className="w-full px-6 py-4 bg-[#F5F3F7] rounded-[14px] focus:ring-0 focus:outline-none peer pt-6 transition-all duration-200 border-2 border-transparent focus:border-[#4FFF4C]"
+                    placeholder=" "
+                  />
+                  <label 
+                    htmlFor="name"
+                    className="absolute text-gray-500 duration-300 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3"
+                  >
+                    Your Name
+                  </label>
+                  {error.name && (
+                    <p className="mt-1 text-sm text-red-500 ml-6">{error.name}</p>
+                  )}
                 </div>
 
-                <div className="space-y-1">
-                  <label className="text-gray-700 text-xs sm:text-sm font-medium text-left block">Your Email</label>
+                <div className="relative">
                   <input
                     type="email"
                     value={email}
                     onChange={handleEmailChange}
-                    className={`w-full h-[42px] px-3 bg-white rounded-lg border ${
-                      error.email ? 'border-red-500' : 'border-[#4CAF50]'
-                    } text-gray-900 transition-colors text-sm`}
-                    placeholder="email@example.com"
+                    id="email"
+                    className="w-full px-6 py-4 bg-[#F5F3F7] rounded-[14px] focus:ring-0 focus:outline-none peer pt-6 transition-all duration-200 border-2 border-transparent focus:border-[#4FFF4C]"
+                    placeholder=" "
                   />
-                  {error.email && <p className="text-red-500 text-xs sm:text-sm text-left">{error.email}</p>}
+                  <label 
+                    htmlFor="email"
+                    className="absolute text-gray-500 duration-300 transform -translate-y-3 scale-75 top-4 z-10 origin-[0] left-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3"
+                  >
+                    Your Email
+                  </label>
+                  {error.email && (
+                    <p className="mt-1 text-sm text-red-500 ml-6">{error.email}</p>
+                  )}
                 </div>
 
                 <button
                   type="submit"
-                  disabled={status === 'loading' || !isFormValid}
-                  className={`w-full h-[42px] text-white rounded-lg text-sm font-medium transition-all transform hover:scale-[1.02] active:scale-[0.98] ${
-                    status === 'loading' 
-                      ? 'bg-gray-400 cursor-not-allowed' 
-                      : status === 'success'
-                      ? 'bg-green-500'
-                      : isFormValid
-                      ? 'bg-[#4CAF50] hover:bg-[#45a049]'
-                      : 'bg-[#808080] cursor-not-allowed'
+                  disabled={!isFormValid || status === 'loading'}
+                  className={`w-full py-4 px-6 rounded-[14px] text-white font-medium transition-colors ${
+                    isFormValid && status !== 'loading'
+                      ? 'bg-[#1B3B2C] hover:bg-[#152e22]'
+                      : 'bg-gray-400 cursor-not-allowed'
                   }`}
                 >
-                  {status === 'loading' 
-                    ? 'Subscribing...' 
-                    : status === 'success'
-                    ? 'Subscribed!'
-                    : 'Subscribe Now'}
+                  {status === 'loading' ? 'Subscribing...' : 'Subscribe Now'}
                 </button>
               </form>
 
-              <p className="text-[#FF6B4D] text-[10px] sm:text-xs md:text-sm text-left">
-                Don&apos;t Worry, We won&apos;t spam you
+              <p className="text-sm text-[#2F952D] mt-6">
+                Your friendly neighborhood grocer!
               </p>
             </div>
 
-            {/* Desktop Image */}
-            <div className="relative hidden md:block">
+            <div className="relative w-[297px] h-[428px]">
               <Image
-                src="/modal.png"
-                alt="Fresh produce display"
+                src="/grocerey-bag.png"
+                alt="Grocery bag with fresh produce"
                 fill
-                className="object-cover"
+                className="object-cover rounded-tl-[16px]"
                 priority
               />
             </div>

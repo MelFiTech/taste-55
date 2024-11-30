@@ -1,13 +1,36 @@
 'use client'
 
+import dynamic from 'next/dynamic'
 import Header from '@/app/components/Header'
-import AboutHero from './components/AboutHero'
-import Inspo from './components/Inspo'
-import Promote from './components/Promote'
-import Partners from './components/55Partners'
-import HotFood from './components/HotFood'
-import Value from './components/Value'
-import Subscribe from '@/app/components/Subscribe'
+
+// Dynamically import components with loading fallbacks
+const AboutHero = dynamic(() => import('./components/AboutHero'), {
+  loading: () => <div className="h-screen animate-pulse bg-gray-100" />
+})
+
+const Inspo = dynamic(() => import('./components/Inspo'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100" />
+})
+
+const Promote = dynamic(() => import('./components/Promote'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100" />
+})
+
+const Partners = dynamic(() => import('./components/55Partners'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100" />
+})
+
+const HotFood = dynamic(() => import('./components/HotFood'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100" />
+})
+
+const Value = dynamic(() => import('./components/Value'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100" />
+})
+
+const Subscribe = dynamic(() => import('@/app/components/Subscribe'), {
+  loading: () => <div className="h-96 animate-pulse bg-gray-100" />
+})
 
 export default function About() {
   return (

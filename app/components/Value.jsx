@@ -15,12 +15,11 @@ const Value = () => {
       <div className="relative z-10 max-w-[1240px] mx-auto text-center">
         <h2 className="text-[42px] font-bold mb-8">Our Value</h2>
         <p className="text-[18px] leading-[1.8] max-w-[900px] mx-auto">
-          To provide the highest quality of foods and products to our communities to improve the 
-          overall health of the community and encourage better food behaviors for future 
-          generations. We believe that food is medicine, the healthier the foods, better healthy and 
-          stronger communities. We do so by partnering with find mission-driver farmers and 
-          producers that believe in building stronger communities ties and preserving our 
-          environment with ethical and sustainable practices.
+          To provide the highest quality of foods and products to our communities, to improve the overall health of 
+          the community and to encourage better food behaviors for future generations. We believe that food is medicine; 
+          the healthier the food, the healthier and stronger the community. We partner with find mission-driven farmers 
+          and producers that believe in building stronger community ties and preserving our environment with ethical 
+          and sustainable practices.
         </p>
       </div>
     </section>

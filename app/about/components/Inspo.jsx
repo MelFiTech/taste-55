@@ -4,12 +4,16 @@ import Image from 'next/image'
 
 export default function AboutMission() {
     const images = [
-      { url: 'https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg', alt: 'Grocery store aisle' },
-      { url: 'https://images.pexels.com/photos/8426380/pexels-photo-8426380.jpeg', alt: 'Assorted fruits in basket' },
-      { url: 'https://images.pexels.com/photos/2994900/pexels-photo-2994900.jpeg', alt: 'Cooked chicken dish' },
-      { url: 'https://images.pexels.com/photos/3962285/pexels-photo-3962285.jpeg', alt: 'Woman holding fruit stand' },
-      { url: 'https://images.pexels.com/photos/27175867/pexels-photo-27175867.jpeg', alt: 'Couple shopping for peppers' },
-      { url: 'https://images.pexels.com/photos/8422691/pexels-photo-8422691.jpeg', alt: 'Elderly man with vegetables' }
+      { url: '/1.png', alt: 'Image 1', width: 384, height: 256 },
+      { url: '/2.png', alt: 'Image 2', width: 384, height: 256 },
+      { url: '/3.png', alt: 'Image 3', width: 384, height: 256 },
+      { url: '/4.png', alt: 'Image 4', width: 384, height: 256 },
+      { url: '/5.png', alt: 'Image 5', width: 384, height: 256 },
+      { url: '/6.png', alt: 'Image 6', width: 384, height: 256 },
+      { url: '/7.png', alt: 'Image 7', width: 384, height: 256 },
+      { url: '/8.png', alt: 'Image 8', width: 384, height: 256 },
+      { url: '/9.png', alt: 'Image 9', width: 384, height: 256 },
+      { url: '/10.png', alt: 'Image 10', width: 384, height: 256 }
     ]
 
     return (
@@ -21,11 +25,7 @@ export default function AboutMission() {
               The inspiration behind Taste 55 and Partners spans three geographical regions – North America, Europe, and Sub-Saharan Africa heritage. This journey has forged illuminating conversations with farmers and food producers around the world about the practice of foodstuffs, ecological footprints and food insecurity.
             </p>
             
-            <div className="relative w-full overflow-hidden">
-              {/* Gradient overlays for fade effect */}
-              <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
-              <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
-              
+            <div className="w-full">
               <div 
                 className="flex animate-marquee whitespace-nowrap"
                 style={{
@@ -41,8 +41,12 @@ export default function AboutMission() {
                     <Image
                       src={image.url}
                       alt={image.alt}
-                      fill
-                      className="object-cover"
+                      width={image.width}
+                      height={image.height}
+                      className="object-cover w-full h-full"
+                      loading={index < 4 ? "eager" : "lazy"}
+                      priority={index < 4}
+                      quality={75}
                       sizes="(max-width: 768px) 288px, 384px"
                     />
                   </div>

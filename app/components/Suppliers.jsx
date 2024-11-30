@@ -4,32 +4,32 @@ import Image from 'next/image';
 const suppliers = [
   {
     region: 'Africa',
-    description: 'Bringing the vibrant flavors of quality groceries from Africa to your table.',
+    description: 'Ethically sourced products like fresh produce, spices, and specialty goods reflecting the continents rich agricultural heritage and cultural flavors.',
     image: '/africa.png',
   },
   {
     region: 'Asia',
-    description: 'Experience the freshest quality, even in the coldest conditions.',
+    description: 'We offer variety of authentic products, from fresh produce to specialty items, showcasing the diverse culinary traditions and agricultural richness.',
     image: '/asia.png', 
   },
   {
     region: 'Australia',
-    description: 'Explore the rich and diverse flavors of Asia. From fresh produce to traditional ingredients.',
+    description: 'We provide high-quality products, including fresh produce, meats, and specialty goods, reflecting the our unique agriculture and sustainable practices.',
     image: '/australia.png',
   },
   {
     region: 'Caribbean', 
-    description: 'Fresh, local, and uniquely Australian. Discover a range of quality groceries.',
+    description: 'We offer vibrant and authentic products, including tropical fruits, spices, and specialty items, celebrating the regions rich culinary heritage and cultural diversity.',
     image: '/caribbean.png',
   },
   {
     region: 'North America',
-    description: 'From coast to coast, bringing you the finest quality groceries. Fresh, local, and proudly North American.',
+    description: 'We deliver a wide range of products, from fresh produce and dairy to specialty goods, highlighting the our agricultural abundance and diverse culinary skills.',
     image: '/north-America.png',
   },
   {
     region: 'South America',
-    description: 'Elevate your culinary adventures and shop for fruits and traditional ingredients.',
+    description: 'We provide rich & authentic products, including tropical fruits, coffee, and grains, showcasing our agricultural diversity and vibrant culinary traditions.',
     image: '/south-america.png',
   },
 ];
@@ -52,10 +52,9 @@ export default function Suppliers() {
       {/* Content */}
       <div className="relative z-10 max-w-[1240px] mx-auto px-4">
         <div className="text-left mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">Meet our Suppliers</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Meet our Sourcing Partners</h2>
           <p className="text-lg text-white max-w-3xl">
-            Our suppliers ensure that the freshest, most nutritious food makes it to your table while fostering 
-            a connection between you and your family.
+          Our partners ensure that the freshest, most nutritious foods make it to your table while fostering a connection between you and your family.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
@@ -72,7 +71,7 @@ export default function Suppliers() {
               </div>
               <div className="mt-4 text-left">
                 <h3 className="text-2xl font-bold text-white mb-2">{supplier.region}</h3>
-                <p className="text-gray-200 line-clamp-2">{supplier.description}</p>
+                <p className="text-gray-200">{supplier.description}</p>
               </div>
             </div>
           ))}

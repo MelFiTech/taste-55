@@ -14,7 +14,7 @@ export default function AboutTeam() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="max-w-xl mx-auto text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">At Taste55 & Partners,</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8">At Taste55 & Partners</h2>
             <p className="text-base md:text-lg leading-relaxed mb-4 md:mb-6">
               We want our neighborhood partners to feel at home by browsing our aisle while finding their childhood foods and passing down traditions to the next generation without the need to visit different stores. We aim to be a one-stop shop within the neighborhoods we serve.
             </p>

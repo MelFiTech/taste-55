@@ -10,12 +10,22 @@ export default function Subscribe() {
   return (
     <section className="h-[600px] bg-green-900 text-white text-center relative flex flex-col justify-between">
       <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col items-center">
-        <span className="text-lg font-bold mb-2 opacity-40 hidden md:block">Taste55</span>
-        <Image src="/logo.png" alt="Taste 55 Logo" width={90} height={90} className="opacity-50" />
+        <Image 
+          src="/logo.png" 
+          alt="Taste 55 Logo" 
+          width={120} 
+          height={120} 
+          className="opacity-50 md:w-[200px] md:h-[200px] animate-[spin_20s_linear_infinite]" 
+        />
       </div>
       <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center">
-        <span className="text-lg font-bold mb-2 opacity-40 hidden md:block">Taste55</span>
-        <Image src="/logo.png" alt="Taste 55 Logo" width={90} height={90} className="opacity-50" />
+        <Image 
+          src="/logo.png" 
+          alt="Taste 55 Logo" 
+          width={120} 
+          height={120} 
+          className="opacity-50 md:w-[200px] md:h-[200px] animate-[spin_20s_linear_infinite]" 
+        />
       </div>
       
       {/* Main content centered vertically */}

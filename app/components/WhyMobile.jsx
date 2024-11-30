@@ -37,9 +37,9 @@ export default function WhyMobile() {
     <section className="relative py-12 md:py-20">
       {/* Title Section */}
       <div className="max-w-[1240px] mx-auto mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-left">Why Choose Taste55</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-left">Why Choose Us</h2>
         <p className="text-base md:text-lg text-left max-w-[600px]">
-          Every item is inspected for quality, freshness, and flavor, so you can shop with confidence knowing you&apos;re getting the very best for you and your family.
+          Every item is inspected for quality, freshness, and flavor, so you can shop with confidence knowing you're getting the very best for you and your family.
         </p>
       </div>
 

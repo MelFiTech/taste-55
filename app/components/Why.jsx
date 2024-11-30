@@ -30,13 +30,14 @@ const features = [
 
 export default function Why() {
   return (
-    <section className="relative h-[700px]">
+    <section className="relative h-[800px]">
       {/* Title Section */}
-      <div className="bg-white w-full py-6 text-center">
+      <div className="bg-white w-full py-24">
         <div className="max-w-[1240px] mx-auto">
-          <h2 className="text-4xl font-bold mb-4">Why Choose Taste55</h2>
-          <p className="text-lg max-w-[600px] mx-auto">
-            Every item is inspected for quality, freshness, and flavor, so you can shop with confidence knowing you&apos;re getting the very best for you and your family.
+          <h2 className="text-4xl font-bold mb-4 text-left">Why Choose Us</h2>
+          <p className="text-lg max-w-[700px] leading-relaxed">
+            Every item is inspected for quality, freshness, and flavor, so you can shop with confidence 
+            knowing you're getting the very best for you and your family.
           </p>
         </div>
       </div>

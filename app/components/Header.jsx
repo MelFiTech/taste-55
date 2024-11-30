@@ -103,9 +103,9 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Separator line - only visible when not scrolled */}
-        <div className={`w-full h-[1px] bg-white/20 transition-opacity duration-300 ${
-          isScrolled ? 'opacity-0' : 'opacity-100'
+        {/* Separator Line */}
+        <div className={`w-full h-[1px] transition-all duration-300 ${
+          isScrolled ? 'bg-gray-200' : 'bg-white/20'
         }`} />
 
         {/* Bottom Section - Transparent initially, White when scrolled */}
@@ -129,7 +129,7 @@ export default function Header() {
                     />
                   </div>
                 </li>
-                <li><button onClick={() => {setIsMenuOpen(false); router.push('/about')}} className={`text-lg md:text-[20px] font-medium transition-all duration-300 hover:opacity-80 text-white ${isScrolled ? 'md:text-[#1E4620]' : 'md:text-white'}`}>About Us</button></li>
+                <li><button onClick={() => {setIsMenuOpen(false); router.push('/about')}} className={`text-lg md:text-[20px] font-medium transition-all duration-300 hover:opacity-80 text-white ${isScrolled ? 'md:text-[#1E4620]' : 'md:text-white'}`}>Our Story</button></li>
                 <li><button onClick={() => {setIsMenuOpen(false); router.push('/#subscribe')}} className={`text-lg md:text-[20px] font-medium transition-all duration-300 hover:opacity-80 text-white ${isScrolled ? 'md:text-[#1E4620]' : 'md:text-white'}`}>Community</button></li>
               </ul>
               
