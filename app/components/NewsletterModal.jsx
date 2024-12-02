@@ -198,7 +198,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
               </p>
             </div>
 
-            <div className="relative w-full md:w-[297px] h-[250px] md:h-[428px]">
+            <div className="relative hidden md:block w-[297px] h-[428px]">
               <Image
                 src="/grocerey-bag.png"
                 alt="Grocery bag with fresh produce"
