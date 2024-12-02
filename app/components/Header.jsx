@@ -7,8 +7,8 @@ import { useRouter } from 'next/navigation';
 import NewsletterModal from './NewsletterModal'
 
 const logoPath = {
-  scrolled: "/images/icons/estb.png",
-  default: "/images/icons/est.png"
+  scrolled: "https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101119/taste55/icons/estb.png",
+  default: "https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101117/taste55/icons/est.png"
 }
 
 export default function Header() {
@@ -63,7 +63,7 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <Image 
-                  src="/logo.png"
+                  src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101121/taste55/icons/logo.png"
                   alt="Taste 55 Logo"
                   width={60}
                   height={60}

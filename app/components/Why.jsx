@@ -6,25 +6,25 @@ const features = [
     title: 'Quality Guaranteed',
     description: 'Only the finest and',
     subdescription: 'freshest ingredients.',
-    image: '/images/features/quality.jpg',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101741/taste55/features/quality.png',
   },
   {
     title: 'Local & Sustainable',
     description: 'Supporting farms and',
     subdescription: 'local communities.',
-    image: '/images/features/local.jpg',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101737/taste55/features/local.png',
   },
   {
     title: 'Convenience At Hand',
     description: 'Easy ordering and',
     subdescription: 'fast delivery service.',
-    image: '/images/features/convenience.jpg',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101734/taste55/features/convenience.png',
   },
   {
     title: 'Affordable Prices',
     description: 'Quality groceries that',
     subdescription: 'contain fair prices.',
-    image: '/images/features/affordable.jpg',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101729/taste55/features/affordable.png',
   },
 ];
 

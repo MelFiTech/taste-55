@@ -12,7 +12,7 @@ export default function Subscribe() {
       <section className="h-[480px] bg-green-900 text-white text-center relative flex flex-col justify-between">
         <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-col items-center">
           <Image 
-            src="/images/icons/logo.png" 
+            src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101121/taste55/icons/logo.png" 
             alt="Taste 55 Logo" 
             width={120} 
             height={120} 
@@ -21,7 +21,7 @@ export default function Subscribe() {
         </div>
         <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col items-center">
           <Image 
-            src="/images/icons/logo.png" 
+            src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101121/taste55/icons/logo.png" 
             alt="Taste 55 Logo" 
             width={120} 
             height={120} 
