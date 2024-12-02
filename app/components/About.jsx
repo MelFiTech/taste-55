@@ -4,11 +4,11 @@ import Button from './Button';
 
 export default function About() {
   return (
-    <section className="py-12 md:py-32 bg-green-900 text-white relative">
+    <section className="py-12 md:py-32 bg-green-900 text-white relative overflow-hidden">
       {/* Background pattern - visible on both mobile and desktop */}
-      <div className="absolute top-[50%] md:top-0 inset-x-0 bottom-0 bg-[url('/images/backgrounds/vector.png')] bg-cover bg-center bg-no-repeat opacity-100 z-50 scale-x-[-1] pointer-events-none -translate-x-1/"></div>
+      <div className="absolute inset-0 bg-[url('/images/backgrounds/vector.png')] bg-cover bg-center bg-no-repeat opacity-100 scale-x-[-1] pointer-events-none"></div>
       
-      <div className="max-w-[1240px] mx-auto px-4 flex flex-col md:flex-row items-center relative z-40">
+      <div className="max-w-[1240px] mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
         <div className="w-full md:w-1/2 text-left mb-6 md:mb-12 mt-0 md:-mt-60">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">Our Story</h2>
           <p className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 max-w-[90%] sm:max-w-[95%]">
