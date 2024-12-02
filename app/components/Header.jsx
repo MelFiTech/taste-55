@@ -15,19 +15,12 @@ export default function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
 
       if (currentScrollY === 0) {
         setIsScrolled(false);
@@ -52,9 +45,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={`fixed w-full z-50 transition-all duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      } ${isScrolled ? 'bg-white md:bg-transparent' : ''}`}>
+      <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white md:bg-transparent' : ''}`}>
         {/* Top Section - Transparent initially, Green when scrolled */}
         <div className={`w-full transition-all duration-300 py-1 px-3 md:py-2 md:px-8 ${
           isScrolled ? 'bg-green-900' : 'bg-transparent'

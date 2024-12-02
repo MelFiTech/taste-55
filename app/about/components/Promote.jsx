@@ -47,7 +47,7 @@ export default function AboutJourney() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div className="relative h-[350px] md:h-[550px] rounded-2xl overflow-hidden">
             <NextImage
-              src="/grocery-store.jpg"
+              src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733102316/taste55/hero/grocery-store.png"
               alt="Our Journey"
               fill
               className="object-cover"
