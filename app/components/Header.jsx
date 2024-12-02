@@ -6,6 +6,11 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import NewsletterModal from './NewsletterModal'
 
+const logoPath = {
+  scrolled: "/images/icons/estb.png",
+  default: "/images/icons/est.png"
+}
+
 export default function Header() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +54,7 @@ export default function Header() {
     <>
       <header className={`fixed w-full z-50 transition-all duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}>
+      } ${isScrolled ? 'bg-white md:bg-transparent' : ''}`}>
         {/* Top Section - Transparent initially, Green when scrolled */}
         <div className={`w-full transition-all duration-300 py-1 px-3 md:py-2 md:px-8 ${
           isScrolled ? 'bg-green-900' : 'bg-transparent'
@@ -70,11 +75,12 @@ export default function Header() {
               {/* Mobile Est Image */}
               <div className="md:hidden">
                 <Image 
-                  src={isScrolled ? "/est.png" : "/est.png"}
+                  src={logoPath.default}
                   alt="Taste 55 Established"
                   width={128}
                   height={32}
-                  className="w-20" 
+                  className="w-20"
+                  priority 
                 />
               </div>
               
@@ -120,12 +126,13 @@ export default function Header() {
                 <li className="hidden md:block">
                   <div className="text-center relative py-6 md:py-0">
                     <Image 
-                      src={isScrolled ? "/estb.png" : "/est.png"}
+                      src={isScrolled ? logoPath.scrolled : logoPath.default}
                       alt="Taste 55 Established"
                       width={128}
                       height={32}
                       className="w-24 md:w-32 mx-auto cursor-pointer"
                       onClick={() => router.push('/')}
+                      priority
                     />
                   </div>
                 </li>

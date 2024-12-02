@@ -928,6 +928,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cloudinary@npm:^2.5.1":
+  version: 2.5.1
+  resolution: "cloudinary@npm:2.5.1"
+  dependencies:
+    lodash: ^4.17.21
+    q: ^1.5.1
+  checksum: 4e4a09fe37677fce1051371b8906bf3a28f31017b867701e7c51977b6bcd0185603f0ca2e47052730e5691b5d0d40abd7f7d7774c046784b1ba55b390b687493
+  languageName: node
+  linkType: hard
+
 "clsx@npm:^2.1.1":
   version: 2.1.1
   resolution: "clsx@npm:2.1.1"
@@ -3477,6 +3487,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"q@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "q@npm:1.5.1"
+  checksum: 147baa93c805bc1200ed698bdf9c72e9e42c05f96d007e33a558b5fdfd63e5ea130e99313f28efc1783e90e6bdb4e48b67a36fcc026b7b09202437ae88a1fb12
+  languageName: node
+  linkType: hard
+
 "qs@npm:^6.7.0":
   version: 6.13.1
   resolution: "qs@npm:6.13.1"
@@ -4105,6 +4122,7 @@ __metadata:
     "@types/node": ^22.9.0
     "@types/react": ^18.3.12
     "@types/react-dom": ^18.3.1
+    cloudinary: ^2.5.1
     clsx: ^2.1.1
     eslint: ^8
     eslint-config-next: 14.2.15

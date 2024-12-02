@@ -6,7 +6,7 @@ const Value = () => {
     <section className="relative w-full py-20 px-4">
       <div className="absolute inset-0">
         <Image
-          src="/Vector 5.png"
+          src="/images/backgrounds/Vector5.png"
           alt="Background pattern"
           fill
           className="object-cover"

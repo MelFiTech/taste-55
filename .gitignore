@@ -40,4 +40,7 @@ next-env.d.ts
 *.mov
 *.avi
 *.wmv
+*.webm
+*.mp3
+*.wav
 public/fres.mp4

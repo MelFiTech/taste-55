@@ -5,32 +5,32 @@ const suppliers = [
   {
     region: 'Africa',
     description: 'Ethically sourced products like fresh produce, spices, and specialty goods reflecting the continents rich agricultural heritage and cultural flavors.',
-    image: '/africa.png',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098111/taste55/regions/africa.png',
   },
   {
-    region: 'Asia',
+    region: 'Asia', 
     description: 'We offer variety of authentic products, from fresh produce to specialty items, showcasing the diverse culinary traditions and agricultural richness.',
-    image: '/asia.png', 
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098117/taste55/regions/asia.png',
   },
   {
     region: 'Australia',
     description: 'We provide high-quality products, including fresh produce, meats, and specialty goods, reflecting the our unique agriculture and sustainable practices.',
-    image: '/australia.png',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098128/taste55/regions/australia.png',
   },
   {
-    region: 'Caribbean', 
+    region: 'Caribbean',
     description: 'We offer vibrant and authentic products, including tropical fruits, spices, and specialty items, celebrating the regions rich culinary heritage and cultural diversity.',
-    image: '/caribbean.png',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098138/taste55/regions/caribbean.png',
   },
   {
     region: 'North America',
     description: 'We deliver a wide range of products, from fresh produce and dairy to specialty goods, highlighting the our agricultural abundance and diverse culinary skills.',
-    image: '/north-America.png',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098146/taste55/regions/north-america.png',
   },
   {
     region: 'South America',
     description: 'We provide rich & authentic products, including tropical fruits, coffee, and grains, showcasing our agricultural diversity and vibrant culinary traditions.',
-    image: '/south-america.png',
+    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098160/taste55/regions/south-america.png',
   },
 ];
 
@@ -39,13 +39,14 @@ export default function Suppliers() {
     <section className="relative py-20 bg-green-900">
       {/* Background Image with overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-green-900 z-0" /> {/* Green background */}
+        <div className="absolute inset-0 bg-green-900 z-0" />
         <Image
-          src="/bg.png"
+          src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733095973/taste55/backgrounds/bg.png"
           alt="Background"
           fill
           className="object-cover mix-blend-overlay"
-          quality={100}
+          quality={75}
+          loading="lazy"
         />
       </div>
       
@@ -54,7 +55,7 @@ export default function Suppliers() {
         <div className="text-left mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">Meet our Sourcing Partners</h2>
           <p className="text-lg text-white max-w-3xl">
-          Our partners ensure that the freshest, most nutritious foods make it to your table while fostering a connection between you and your family.
+            Our partners ensure that the freshest, most nutritious foods make it to your table while fostering a connection between you and your family.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
@@ -67,6 +68,8 @@ export default function Suppliers() {
                   width={400}
                   height={400}
                   className="w-full h-full object-cover"
+                  loading={index < 2 ? "eager" : "lazy"}
+                  quality={75}
                 />
               </div>
               <div className="mt-4 text-left">

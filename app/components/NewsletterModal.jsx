@@ -126,11 +126,11 @@ export default function NewsletterModal({ isOpen, onClose }) {
           Close
         </button>
 
-        <div className="relative bg-white rounded-[32px] overflow-hidden p-10">
-          <div className="flex gap-[26px]">
-            <div className="w-[329px] h-[428px]">
+        <div className="relative bg-white rounded-[32px] overflow-hidden p-6 md:p-10">
+          <div className="flex flex-col md:flex-row gap-[26px]">
+            <div className="w-full md:w-[329px]">
               <div className="mb-8">
-                <h2 className="text-[40px] leading-[48px] font-medium">Subscribe to our Newsletter</h2>
+                <h2 className="text-[26px] md:text-4xl font-bold mb-4">Subscribe to our Newsletter</h2>
                 <p className="text-gray-600">
                   Signup to our newsletter to receive the latest updates and grocery news.
                 </p>
@@ -143,7 +143,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
                     value={name}
                     onChange={handleNameChange}
                     id="name"
-                    className="w-full px-6 py-4 bg-[#F5F3F7] rounded-[14px] focus:ring-0 focus:outline-none peer pt-6 transition-all duration-200 border-2 border-transparent focus:border-[#4FFF4C]"
+                    className="w-full px-6 py-4 bg-[#F5F3F7] rounded-[14px] focus:ring-0 focus:outline-none peer pt-6 transition-all duration-200 border-2 border-transparent focus:border-green-500"
                     placeholder=" "
                   />
                   <label 
@@ -163,7 +163,7 @@ export default function NewsletterModal({ isOpen, onClose }) {
                     value={email}
                     onChange={handleEmailChange}
                     id="email"
-                    className="w-full px-6 py-4 bg-[#F5F3F7] rounded-[14px] focus:ring-0 focus:outline-none peer pt-6 transition-all duration-200 border-2 border-transparent focus:border-[#4FFF4C]"
+                    className="w-full px-6 py-4 bg-[#F5F3F7] rounded-[14px] focus:ring-0 focus:outline-none peer pt-6 transition-all duration-200 border-2 border-transparent focus:border-green-500"
                     placeholder=" "
                   />
                   <label 
@@ -179,23 +179,26 @@ export default function NewsletterModal({ isOpen, onClose }) {
 
                 <button
                   type="submit"
-                  disabled={!isFormValid || status === 'loading'}
-                  className={`w-full py-4 px-6 rounded-[14px] text-white font-medium transition-colors ${
-                    isFormValid && status !== 'loading'
-                      ? 'bg-[#1B3B2C] hover:bg-[#152e22]'
-                      : 'bg-gray-400 cursor-not-allowed'
-                  }`}
+                  className="w-full py-4 px-6 rounded-[14px] text-white font-bold transition duration-300 bg-[#10482B] hover:bg-[#0d3b24]"
                 >
                   {status === 'loading' ? 'Subscribing...' : 'Subscribe Now'}
                 </button>
+
+                {error.general && (
+                  <p className="text-sm text-red-500 text-center">{error.general}</p>
+                )}
+
+                {showSuccess && (
+                  <p className="text-sm text-green-500 text-center">Successfully subscribed!</p>
+                )}
               </form>
 
-              <p className="text-sm text-[#2F952D] mt-6">
+              <p className="text-sm text-green-600 mt-6">
                 Your friendly neighborhood grocer!
               </p>
             </div>
 
-            <div className="relative w-[297px] h-[428px]">
+            <div className="relative w-full md:w-[297px] h-[250px] md:h-[428px]">
               <Image
                 src="/grocerey-bag.png"
                 alt="Grocery bag with fresh produce"

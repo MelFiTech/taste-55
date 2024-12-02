@@ -1,6 +1,7 @@
 import NextImage from 'next/image'
+import { getCloudinaryUrl } from '@/utils/cloudinaryUrl'
 
-export default function Contact() {
+export default function Value() {
   const values = [
     "We promote local and underrepresented suppliers; we want to champion local and regional food and advocate for systemic change in our municipalities",
     "We teach food history; we believe that consumers should know what they are eating and through transparent labels to make the best decision health",
@@ -10,9 +11,23 @@ export default function Contact() {
     "We believe in building a coalition with suppliers and to act as advocate to improve our food systems"
   ]
 
+  const backgroundImage = 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733095969/taste55/backgrounds/Vector5.png'
+
   return (
-    <section className="py-12 md:py-20 bg-[#FAFAFA]">
-      <div className="container mx-auto px-4">
+    <section className="relative py-16 md:py-24">
+      <div className="absolute inset-0">
+        <NextImage
+          src={backgroundImage}
+          alt="Background Pattern"
+          fill
+          className="object-cover opacity-20"
+          priority={false}
+          loading="lazy"
+          quality={60}
+          sizes="100vw"
+        />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
           <div className="space-y-6 md:space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold">Our Value</h2>

@@ -4,15 +4,11 @@ const nextConfig = {
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: 'images.pexels.com',
+          hostname: 'res.cloudinary.com',
+          pathname: '/dzbgzbccy/**',
         },
       ],
     },
-    eslint: {
-      // Warning: This allows production builds to successfully complete even if
-      // your project has ESLint errors.
-      ignoreDuringBuilds: true,
-    },
-  }
-  
-  module.exports = nextConfig
+}
+
+module.exports = nextConfig

@@ -6,25 +6,25 @@ const features = [
     title: 'Quality Guaranteed',
     description: 'Only the finest and',
     subdescription: 'freshest ingredients.',
-    image: '/quality.jpg',
+    image: '/images/features/quality.jpg',
   },
   {
     title: 'Local & Sustainable',
     description: 'Supporting farms and',
     subdescription: 'local communities.',
-    image: '/local.jpg',
+    image: '/images/features/local.jpg',
   },
   {
     title: 'Convenience At Hand',
     description: 'Easy ordering and',
     subdescription: 'fast delivery service.',
-    image: '/convenience.jpg',
+    image: '/images/features/convenience.jpg',
   },
   {
     title: 'Affordable Prices',
     description: 'Quality groceries that',
     subdescription: 'contain fair prices.',
-    image: '/affordable.jpg',
+    image: '/images/features/affordable.jpg',
   },
 ];
 

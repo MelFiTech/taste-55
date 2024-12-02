@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cloudinary": "^2.5.1",
     "clsx": "^2.1.1",
     "google-spreadsheet": "^4.1.4",
     "googleapis": "^144.0.0",

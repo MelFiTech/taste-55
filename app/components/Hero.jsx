@@ -12,13 +12,15 @@ export default function Hero() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black/50 z-10" /> {/* Added dark overlay */}
         <Image
-          src="/grocery-store.jpg"
+          src="/images/hero/grocery-store.jpg"
           alt="Grocery Store"
           fill
-          className="object-cover brightness-50"
           priority
+          quality={85}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j..."
           sizes="100vw"
-          quality={90}
+          className="object-cover brightness-50"
         />
       </div>
 

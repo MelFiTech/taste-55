@@ -26,7 +26,7 @@ const features = [
   {
     title: 'Affordable',
     subtitle: 'Prices',
-    description: 'Quality groceries at prices you will love.',
+    description: 'Quality groceries that contain fair prices.',
     image: '/affordable.jpg',
     imageHeight: 'h-full',
   },
