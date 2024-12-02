@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-black/50 z-10" /> {/* Added dark overlay */}
         <Image
-          src="/images/hero/grocery-store.jpg"
+          src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733102316/taste55/hero/grocery-store.png"
           alt="Grocery Store"
           fill
           priority

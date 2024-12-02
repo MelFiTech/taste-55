@@ -49,7 +49,7 @@ export default function Value() {
           <div className="relative mt-8 md:mt-0">
             <div className="relative w-full h-[300px] md:h-[500px] lg:h-[700px]">
               <video
-                src="/girl.mp4"
+                src="https://res.cloudinary.com/dzbgzbccy/video/upload/v1733132133/taste55/home/girl.mp4"
                 autoPlay
                 loop
                 muted

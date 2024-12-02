@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className="py-12 md:py-32 bg-green-900 text-white relative">
       {/* Background pattern - visible on both mobile and desktop */}
-      <div className="absolute top-[50%] md:top-0 inset-x-0 bottom-0 bg-[url('/images/backgrounds/vector.png')] bg-cover bg-center bg-no-repeat opacity-100 z-50 scale-x-[-1] pointer-events-none -translate-x-1/6"></div>
+      <div className="absolute top-[50%] md:top-0 inset-x-0 bottom-0 bg-[url('/images/backgrounds/vector.png')] bg-cover bg-center bg-no-repeat opacity-100 z-50 scale-x-[-1] pointer-events-none -translate-x-1/"></div>
       
       <div className="max-w-[1240px] mx-auto px-4 flex flex-col md:flex-row items-center relative z-40">
         <div className="w-full md:w-1/2 text-left mb-6 md:mb-12 mt-0 md:-mt-60">
@@ -24,7 +24,7 @@ export default function About() {
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
           <div className="relative w-full h-[300px] sm:h-[400px] md:h-[600px] mx-auto md:ml-14 px-[10px] md:px-0">
             <Image 
-              src="/image 28.png" 
+              src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733131994/taste55/home/Image%2028.png"
               alt="Groceries" 
               fill
               className="object-contain rounded-lg" 
