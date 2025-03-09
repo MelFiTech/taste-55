@@ -5,28 +5,28 @@ const features = [
   {
     title: 'Quality Guaranteed',
     subtitle: '',
-    description: 'Only the finest and freshest ingredients.',
+    description: 'Only the finest, freshest ingredients for your family.',
     image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101741/taste55/features/quality.png',
     imageHeight: 'h-full',
   },
   {
     title: 'Local & Sustainable', 
     subtitle: '',
-    description: 'Supporting farms and local communities.',
+    description: 'Supporting local farms and bringing you the best from our community.',
     image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101737/taste55/features/local.png',
     imageHeight: 'h-full',
   },
   {
     title: 'Convenience',
     subtitle: 'At Hand',
-    description: 'Easy ordering and fast delivery service.',
+    description: 'Easy online ordering, fast delivery, and curbside pickup.',
     image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101734/taste55/features/convenience.png',
     imageHeight: 'h-full',
   },
   {
     title: 'Affordable',
     subtitle: 'Prices',
-    description: 'Quality groceries that contain fair prices.',
+    description: 'Quality groceries at prices you&apos;ll love.',
     image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101729/taste55/features/affordable.png',
     imageHeight: 'h-full',
   },
@@ -37,9 +37,9 @@ export default function WhyMobile() {
     <section className="relative py-12 md:py-20">
       {/* Title Section */}
       <div className="max-w-[1240px] mx-auto mb-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-left">Why Choose Us</h2>
-        <p className="text-base md:text-lg text-left max-w-[600px]">
-          Every item is inspected for quality, freshness, and flavor, so you can shop with confidence knowing you're getting the very best for you and your family.
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-left text-[#10482B]">WHY CHOOSE US</h2>
+        <p className="text-base md:text-lg text-left max-w-[600px] text-[#10482B]">
+          At Taste 55, we believe food is more than just sustenance, it's a personal relationship. We are committed to fostering community togetherness, offering you healthy and affordable options that cater to your unique needs. We provide the ingredients, and you make the choices that are best for your family.
         </p>
       </div>
 
@@ -48,14 +48,14 @@ export default function WhyMobile() {
         {features.slice(0, -1).map((feature, index) => (
           <div 
             key={index} 
-            className={`${index % 2 === 0 ? 'bg-[#FFF7F2]' : 'bg-[#FFEAD8]'} rounded-lg overflow-hidden flex flex-col h-full`}
+            className="bg-white rounded-lg overflow-hidden flex flex-col h-full"
           >
             <div className="p-6 flex-shrink-0">
               <div className="mb-2">
-                <h3 className="text-xl font-bold leading-tight">{feature.title} {feature.subtitle}</h3>
+                <h3 className="text-xl font-bold leading-tight text-[#10482B]">{feature.title} {feature.subtitle}</h3>
               </div>
               <div>
-                <p className="text-sm leading-tight">{feature.description}</p>
+                <p className="text-sm leading-tight text-[#10482B]">{feature.description}</p>
               </div>
             </div>
             <div className="h-96 md:h-[900px] lg:h-[900px] relative w-full flex-grow">
@@ -72,13 +72,13 @@ export default function WhyMobile() {
         ))}
 
         {/* Last Feature with Different Styling */}
-        <div className="bg-[#FFEAD8] rounded-lg overflow-hidden flex flex-col h-full">
+        <div className="bg-white rounded-lg overflow-hidden flex flex-col h-full">
           <div className="p-6 flex-shrink-0">
             <div className="mb-2">
-              <h3 className="text-xl font-bold leading-tight">{features[3].title} {features[3].subtitle}</h3>
+              <h3 className="text-xl font-bold leading-tight text-[#10482B]">{features[3].title} {features[3].subtitle}</h3>
             </div>
             <div>
-              <p className="text-sm leading-tight">{features[3].description}</p>
+              <p className="text-sm leading-tight text-[#10482B]">{features[3].description}</p>
             </div>
           </div>
           <div className="h-96 md:h-[1000px] lg:h-[1000px] relative w-full flex-grow">

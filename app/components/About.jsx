@@ -4,13 +4,13 @@ import Button from './Button';
 
 export default function About() {
   return (
-    <section className="relative flex h-screen">
+    <section className="relative flex flex-col md:flex-row min-h-screen">
       {/* Left side - Text content */}
-      <div className="flex-1 flex flex-col justify-center px-16">
-        <h2 className="text-[64px] font-bold text-[#10482B] leading-tight mb-2">
+      <div className="flex-1 flex flex-col justify-center px-6 md:px-16 py-12 md:py-0">
+        <h2 className="text-4xl md:text-[64px] font-bold text-[#10482B] leading-tight mb-4 md:mb-2">
           OUR STORY
         </h2>
-        <p className="text-xl text-[#10482B] max-w-[600px] leading-relaxed mb-8">
+        <p className="text-lg md:text-xl text-[#10482B] max-w-[600px] leading-relaxed mb-8">
           The inspiration behind Taste 55 and Partners spans three geographical regions – North America, Europe, and Sub-Saharan Africa heritage. This journey has forged illuminating conversations with farmers and food producers around the world about the practice of foodstuffs, ecological footprints and food insecurity. At the core of these environmental and biodiversity challenges wrests our reliance on traditional food systems to feed billions of people with various tastes and food traditions.
         </p>
         <Link href="/about">
@@ -21,7 +21,7 @@ export default function About() {
       </div>
 
       {/* Right side - Image */}
-      <div className="flex-1 relative flex items-center justify-center">
+      <div className="flex-1 relative min-h-[300px] md:min-h-0 flex items-center justify-center">
         <Image
           src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1741515484/taste55/home/ihoenilvfkdbmmttc1hd.png"
           alt="Groceries"

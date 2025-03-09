@@ -4,26 +4,26 @@ import Image from 'next/image';
 const features = [
   {
     title: ['Quality', 'Guaranteed'],
-    description: 'Only the finest and',
-    subdescription: 'freshest ingredients.',
+    description: 'Only the finest and freshest ingredients for your family.',
+    subdescription: '',
     image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101741/taste55/features/quality.png',
   },
   {
     title: ['Local &', 'Sustainable'],
-    description: 'Supporting farms and',
-    subdescription: 'local communities.',
+    description: 'Supporting local farms and bringing you the best from our community.',
+    subdescription: '',
     image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101737/taste55/features/local.png',
   },
   {
     title: ['Convenience', 'At Hand'],
-    description: 'Easy ordering and',
-    subdescription: 'fast delivery service.',
+    description: 'Easy online ordering, fast delivery, and curbside pickup.',
+    subdescription: '',
     image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101734/taste55/features/convenience.png',
   },
   {
     title: ['Affordable', 'Prices'],
-    description: 'Quality groceries that',
-    subdescription: 'contain fair prices.',
+    description: "Quality groceries at prices you'll love.",
+    subdescription: '',
     image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101729/taste55/features/affordable.png',
   },
 ];
@@ -36,7 +36,7 @@ export default function Why() {
         <div className="max-w-[1240px] mx-auto">
           <h2 className="text-[64px] font-bold mb-4 text-left text-[#10482B] uppercase">Why Choose Us</h2>
           <p className="text-lg max-w-[700px] leading-relaxed text-[#10482B]">
-          At Taste 55, we believe food is more than just sustenance, it&apos;s a personal relationship. We are committed to fostering community togetherness, offering you healthy and affordable options that cater to your unique needs. We provide the ingredients, and you make the choices that are best for your family.
+            At Taste 55, we believe food is more than just sustenance, it&apos;s a personal relationship. We are committed to fostering community togetherness, offering you healthy and affordable options that cater to your unique needs. We provide the ingredients, and you make the choices that are best for your family.
           </p>
         </div>
       </div>
@@ -74,6 +74,7 @@ export default function Why() {
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 25vw"
+              priority
             />
           </div>
         ))}
