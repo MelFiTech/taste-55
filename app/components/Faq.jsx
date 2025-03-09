@@ -25,19 +25,19 @@ export default function Faq() {
   };
 
   return (
-    <section className="py-16 md:py-[120px] bg-[#860336] text-white">
+    <section className="py-16 md:py-[120px] bg-white text-[#10482B]">
       <div className="max-w-[1240px] mx-auto px-4 md:px-8 flex flex-col md:flex-row md:items-start">
         <div className="w-full md:w-1/2 text-left mb-8 md:mb-0 md:pr-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">FAQ</h2>
-          <p className="text-base md:text-lg">
-            Got questions? Check out our FAQs for answers on groceries availability, Our suppliers, and more!
+          <h2 className="text-[64px] font-bold mb-4">FAQ</h2>
+          <p className="text-base">
+            Got questions? Check out our FAQs for answers on groceries <br /> availability, Our suppliers, and more!
           </p>
         </div>
         <div className="w-full md:w-1/2 space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white rounded-lg p-4">
+            <div key={index} className="bg-[#10482B] rounded-lg p-4">
               <div
-                className="flex justify-between items-center cursor-pointer text-black"
+                className="flex justify-between items-center cursor-pointer text-white"
                 onClick={() => toggleFaq(index)}
                 role="button"
                 tabIndex={0}
@@ -51,7 +51,7 @@ export default function Faq() {
                 <span className="text-xl flex-shrink-0">{openIndex === index ? '-' : '+'}</span>
               </div>
               {openIndex === index && (
-                <p className="mt-2 text-sm md:text-base text-black">{faq.answer}</p>
+                <p className="mt-2 text-sm md:text-base text-white">{faq.answer}</p>
               )}
             </div>
           ))}

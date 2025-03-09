@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Value from './components/Value.jsx';
 import Suppliers from './components/Suppliers.jsx';
+import Daily from './components/Daily.jsx';
 import Why from './components/Why';
 import WhyMobile from './components/WhyMobile';
 import About from './components/About.jsx';
@@ -22,11 +22,10 @@ export default function Home() {
       </div>
       <div id="why" className="hidden md:block">
         <Why />
-      </div>
-      <div id="suppliers">
+      </div><div id="suppliers">
         <Suppliers />
       </div>
-      <Value />
+      <Daily />
       <div id="about">
         <About />
       </div>

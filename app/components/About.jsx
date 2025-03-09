@@ -4,35 +4,33 @@ import Button from './Button';
 
 export default function About() {
   return (
-    <section className="py-12 md:py-32 bg-green-900 text-white relative overflow-hidden">
-      {/* Background pattern - visible on both mobile and desktop */}
-      <div className="absolute inset-0 bg-[url('/images/backgrounds/vector.png')] bg-cover bg-center bg-no-repeat opacity-100 scale-x-[-1] pointer-events-none"></div>
-      
-      <div className="max-w-[1240px] mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
-        <div className="w-full md:w-1/2 text-left mb-6 md:mb-12 mt-0 md:-mt-60">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">Our Story</h2>
-          <p className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 max-w-[90%] sm:max-w-[95%]">
-            The inspiration behind Taste 55 and Partners spans three geographical regions – North America, Europe, and Sub-Saharan Africa heritage. This journey has forged illuminating conversations with farmers and food producers around the world about the practice of foodstuffs, ecological footprints, and food insecurity.
-          </p>
-          <Link href="/about" className="inline-block w-full sm:w-auto">
-            <Button variant="white" className="w-full sm:w-auto bg-white text-green-900 hover:bg-gray-100 transition-colors cursor-pointer">
-              <span className="text-green-900">Continue Reading</span>
-            </Button>
-          </Link>
-        </div>
-        
-        <div className="w-full md:w-1/2 mt-8 md:mt-0">
-          <div className="relative w-full h-[300px] sm:h-[400px] md:h-[600px] mx-auto md:ml-14 px-[10px] md:px-0">
-            <Image 
-              src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733131994/taste55/home/Image%2028.png"
-              alt="Groceries" 
-              fill
-              className="object-contain rounded-lg" 
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 50vw"
-              priority
-            />
-          </div>
-        </div>
+    <section className="relative flex h-screen">
+      {/* Left side - Text content */}
+      <div className="flex-1 flex flex-col justify-center px-16">
+        <h2 className="text-[64px] font-bold text-[#10482B] leading-tight mb-2">
+          OUR STORY
+        </h2>
+        <p className="text-xl text-[#10482B] max-w-[600px] leading-relaxed mb-8">
+          The inspiration behind Taste 55 and Partners spans three geographical regions – North America, Europe, and Sub-Saharan Africa heritage. This journey has forged illuminating conversations with farmers and food producers around the world about the practice of foodstuffs, ecological footprints and food insecurity. At the core of these environmental and biodiversity challenges wrests our reliance on traditional food systems to feed billions of people with various tastes and food traditions.
+        </p>
+        <Link href="/about">
+          <Button variant="white" className="bg-[#10482B] text-white hover:bg-[#0d3b24] transition-colors">
+            Continue Reading
+          </Button>
+        </Link>
+      </div>
+
+      {/* Right side - Image */}
+      <div className="flex-1 relative flex items-center justify-center">
+        <Image
+          src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1741515484/taste55/home/ihoenilvfkdbmmttc1hd.png"
+          alt="Groceries"
+          width={500}
+          height={477}
+          className="object-cover"
+          quality={85}
+          priority
+        />
       </div>
     </section>
   );

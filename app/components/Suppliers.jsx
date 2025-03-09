@@ -1,84 +1,38 @@
 import React from 'react';
 import Image from 'next/image';
 
-const suppliers = [
-  {
-    region: 'Africa',
-    description: 'Ethically sourced products like fresh produce, spices, and specialty goods reflecting the continents rich agricultural heritage and cultural flavors.',
-    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098111/taste55/regions/africa.png',
-  },
-  {
-    region: 'Asia', 
-    description: 'We offer variety of authentic products, from fresh produce to specialty items, showcasing the diverse culinary traditions and agricultural richness.',
-    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098117/taste55/regions/asia.png',
-  },
-  {
-    region: 'Australia',
-    description: 'We provide high-quality products, including fresh produce, meats, and specialty goods, reflecting the our unique agriculture and sustainable practices.',
-    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098128/taste55/regions/australia.png',
-  },
-  {
-    region: 'Caribbean',
-    description: 'We offer vibrant and authentic products, including tropical fruits, spices, and specialty items, celebrating the regions rich culinary heritage and cultural diversity.',
-    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098138/taste55/regions/caribbean.png',
-  },
-  {
-    region: 'North America',
-    description: 'We deliver a wide range of products, from fresh produce and dairy to specialty goods, highlighting the our agricultural abundance and diverse culinary skills.',
-    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098146/taste55/regions/north-america.png',
-  },
-  {
-    region: 'South America',
-    description: 'We provide rich & authentic products, including tropical fruits, coffee, and grains, showcasing our agricultural diversity and vibrant culinary traditions.',
-    image: 'https://res.cloudinary.com/dzbgzbccy/image/upload/v1733098160/taste55/regions/south-america.png',
-  },
-];
-
 export default function Suppliers() {
   return (
-    <section className="relative py-20 bg-green-900">
-      {/* Background Image with overlay */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-green-900 z-0" />
-        <Image
-          src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1733095973/taste55/backgrounds/bg.png"
-          alt="Background"
-          fill
-          className="object-cover mix-blend-overlay"
-          quality={75}
-          loading="lazy"
-        />
+    <section className="relative flex h-screen">
+      {/* Left side - Text content */}
+      <div 
+        className="flex-1 flex flex-col justify-center px-16"
+        style={{
+          backgroundImage: "url('https://res.cloudinary.com/dzbgzbccy/image/upload/v1741514444/taste55/home/iicahvk96kr6qo1ji6kl.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <h2 className="text-[64px] font-bold text-[#10482B] leading-tight mb-2">
+          MEET OUR<br />
+          SOURCING<br />
+          PARTNERS
+        </h2>
+        <p className="text-xl text-[#10482B] max-w-[600px] leading-relaxed">
+          Our farmers and producers are the heart of our success. We rely on them to ensure fresh, nutritious food fills our shelves every day, and to help us negotiate the best prices, all while supporting our commitment to quality and sustainability.
+        </p>
       </div>
-      
-      {/* Content */}
-      <div className="relative z-10 max-w-[1240px] mx-auto px-4">
-        <div className="text-left mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">Meet our Sourcing Partners</h2>
-          <p className="text-lg text-white max-w-3xl">
-            Our partners ensure that the freshest, most nutritious foods make it to your table while fostering a connection between you and your family.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-          {suppliers.map((supplier, index) => (
-            <div key={index} className="flex flex-col">
-              <div className="w-full aspect-square rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-                <Image 
-                  src={supplier.image} 
-                  alt={`${supplier.region} suppliers`} 
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover"
-                  loading={index < 2 ? "eager" : "lazy"}
-                  quality={75}
-                />
-              </div>
-              <div className="mt-4 text-left">
-                <h3 className="text-2xl font-bold text-white mb-2">{supplier.region}</h3>
-                <p className="text-gray-200">{supplier.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+
+      {/* Right side - Image */}
+      <div className="flex-1 relative">
+        <Image
+          src="https://res.cloudinary.com/dzbgzbccy/image/upload/v1741514280/taste55/home/sdavyfyh8s2xfel7aevw.png"
+          alt="Sourcing Partners"
+          fill
+          className="object-cover"
+          quality={85}
+          priority
+        />
       </div>
     </section>
   );

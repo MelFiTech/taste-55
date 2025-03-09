@@ -32,8 +32,8 @@ export default function Subscribe() {
         {/* Main content centered vertically */}
         <div className="flex-1 flex items-center">
           <div className="max-w-[1240px] mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-4">Subscribe to our Newsletter</h2>
-            <p className="mb-8">Signup to Our newsletter to receive the latest updates and grocery news.</p>
+            <h2 className="text-5xl font-bold mb-4">Subscribe to our <br /> Community</h2>
+            <p className="mb-8">Sign up to our newsletter to receive the latest updates and grocery news.</p>
             <button 
               onClick={() => setIsModalOpen(true)}
               className="bg-white text-black border-2 border-green-500 font-bold py-2 px-6 rounded-full hover:bg-green-50 transition duration-300"

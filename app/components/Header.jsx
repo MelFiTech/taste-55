@@ -11,10 +11,10 @@ const logoPath = {
   default: "https://res.cloudinary.com/dzbgzbccy/image/upload/v1733101117/taste55/icons/est.png"
 }
 
-export default function Header() {
+export default function Header({ alwaysScrolled }) {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(alwaysScrolled || false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNewsletterOpen, setIsNewsletterOpen] = useState(false)
 
@@ -22,10 +22,12 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY === 0) {
-        setIsScrolled(false);
-      } else {
-        setIsScrolled(true);
+      if (!alwaysScrolled) {
+        if (currentScrollY === 0) {
+          setIsScrolled(false);
+        } else {
+          setIsScrolled(true);
+        }
       }
 
       setLastScrollY(currentScrollY);
@@ -33,7 +35,7 @@ export default function Header() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, alwaysScrolled]);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -66,7 +68,7 @@ export default function Header() {
               {/* Mobile Est Image */}
               <div className="md:hidden">
                 <Image 
-                  src={logoPath.default}
+                  src={logoPath.scrolled}
                   alt="Taste 55 Established"
                   width={128}
                   height={32}
