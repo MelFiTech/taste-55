@@ -68,7 +68,7 @@ export default function Header({ alwaysScrolled }) {
               {/* Mobile Est Image */}
               <div className="md:hidden">
                 <Image 
-                  src={logoPath.scrolled}
+                  src={logoPath.default}
                   alt="Taste 55 Established"
                   width={128}
                   height={32}
