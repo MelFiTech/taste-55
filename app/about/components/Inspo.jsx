@@ -69,7 +69,8 @@ export default function AboutMission() {
               Our Values
             </h3>
             <p className="text-base text-[#10482B] text-left">
-              To provide the highest quality of foods and products to our communities, to improve the overall health of the community and to encourage better food behaviours for future generations. We believe that food is medicine; the healthier the food, the healthier and stronger the community. We partner with find mission-driven farmers and producers that believe in building stronger community ties and preserving our environment with ethical and sustainable practices.  To consistently drive value:            </p>
+              To provide the highest quality of foods and products to our communities, to improve the overall health of the community and to encourage better food behaviors for future generations. We believe that food is medicine; the healthier the food, the healthier and stronger the community. We partner with mission-driven farmers and producers that believe in building stronger community ties and preserving our environment with ethical and sustainable practices.  To consistently drive value:
+            </p>
             <ul className="text-base text-[#10482B] mt-4 space-y-3 text-left">
               <li>• We care deeply about our environment and our people.</li>
               <li>• We are passionate, caring, and disciplined Tastemakers.</li>
